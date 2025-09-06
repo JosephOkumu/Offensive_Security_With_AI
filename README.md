@@ -68,3 +68,24 @@ AI systems amplify attack surfaces not only by adding more endpoints but also by
 - **Rate Limiting and API Constraints**  
   Prevent abuse of model endpoints via throttling and telemetry.
 
+## AML Attack Categories
+
+AML is to ML what buffer overflows were to C. It opens new attack vectors: logic corruption, extraction, subversion, and poisoning.
+
+| **Category**   | **Description**                        | **Example**                                                   |
+|----------------|----------------------------------------|---------------------------------------------------------------|
+| **Evasion**    | Creating inputs that are misclassified | A malware sample modified slightly to bypass detection        |
+| **Poisoning**  | Injecting crafted data during training | Adding mislabeled benign samples to degrade spam classifier   |
+| **Inference**  | Gaining knowledge about training data  | Membership inference: “Was this user’s data used?”            |
+| **Extraction** | Stealing model functionality or weights | Reconstructing a fraud model via output predictions           |
+| **Backdooring**| Inserting logic triggers               | A facial recognition model unlocked by a specific pattern     |
+
+## Tools and Frameworks for AML Red Teaming
+
+| **Toolkit**                     | **Description**                                            |
+|---------------------------------|------------------------------------------------------------|
+| **Adversarial Robustness Toolbox (ART)** | IBM’s toolkit for AML (evasion, poisoning, inference) |
+| **Foolbox**                     | Python-based evasion testing on PyTorch, TF                |
+| **TextAttack**                   | NLP-focused AML (e.g., LLM adversarial prompts)            |
+| **PromptInject, Gauntlet**       | LLM prompt manipulation frameworks                         |
+| **BackdoorBox**                  | Open-source framework for backdooring and defending models |
