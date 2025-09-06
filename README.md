@@ -1,4 +1,4 @@
-# Offensive Security With AI
+# INTRODUCTION OF OFFENSIVE AI SECURITY
 Introduction to the intersection of Offensive Security and Artificial Intelligence (AI)
 ## Tools and Frameworks for Understanding ML Attacks
 
@@ -109,4 +109,14 @@ _Adapted from MITRE ATLAS and the work of Anthropic/OpenAI Red Teams_
 | **Adversarial Simulation** | Generate targeted adversarial inputs (e.g., jailbreaks)    |
 | **Post-Exploitation**  | Trigger side-effects, unauthorized outputs, or unsafe actions  |
 | **Reporting**          | Document system responses, gaps, recommendations               |
+
+## Model Context Protocol (MCP) in Red Teaming
+
+When testing AI Agents or LLM-integrated pipelines, follow the **Model Context Protocol**:
+
+- **Instruction Layer**: What instructions control the model?  
+- **Context Layer**: What background documents, memories, tools are present?  
+- **Input Layer**: What user query or prompt is used?  
+- **Output Layer**: What actions or responses are triggered?  
+- **Execution Layer**: Does the output trigger tools, plugins, or code execution?  
 
