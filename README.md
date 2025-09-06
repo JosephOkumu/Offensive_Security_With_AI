@@ -144,3 +144,18 @@ python3 -m prompt_lab --model_url http://localhost:8000
 docker-compose up chromadb
 python3 rag_server.py --docs ./redteam_docs/
 ```
+
+## The OWASP Top 10 for LLMs (2024 Draft)
+
+| **ID**   | **Category Name**                | **Red Team Relevance**                        |
+|----------|----------------------------------|-----------------------------------------------|
+| **LLM01** | Prompt Injection                 | Bypass alignment, coerce output               |
+| **LLM02** | Insecure Output Handling         | Trigger system action through response        |
+| **LLM03** | Training Data Poisoning          | Introduce backdoors or triggers               |
+| **LLM04** | Model Denial of Service          | Prompt flooding, over-computation             |
+| **LLM05** | Supply Chain Vulnerabilities     | Attack 3rd-party models/plugins               |
+| **LLM06** | Sensitive Information Disclosure | Extract PII, internal data                    |
+| **LLM07** | Insecure Plugin Design           | Abuse function-calling APIs                   |
+| **LLM08** | Excessive Agency                 | Trigger unintended tool usage                 |
+| **LLM09** | Overreliance on LLMs             | Encourage unsafe LLM-led automation           |
+| **LLM10** | Model Theft                      | Perform model extraction attacks              |
