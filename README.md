@@ -120,3 +120,27 @@ When testing AI Agents or LLM-integrated pipelines, follow the **Model Context P
 - **Output Layer**: What actions or responses are triggered?  
 - **Execution Layer**: Does the output trigger tools, plugins, or code execution?  
 
+## Recommended Infrastructure Stack
+
+| **Layer**               | **Tooling Options**                                           |
+|--------------------------|---------------------------------------------------------------|
+| **Model Hosting**        | llama.cpp, Text Generation WebUI, vLLM, FastChat             |
+| **Agent Framework**      | LangChain, AutoGPT, CrewAI, Semantic Kernel                  |
+| **RAG**                  | Haystack, LlamaIndex, LangChain Retrieval QA                 |
+| **Plugins and Tools**    | LangChain Tool calling, custom OpenAPI plugins               |
+| **Sandboxed Execution**  | Docker, Firejail, gVisor                                    |
+| **Telemetry**            | Grafana, OpenTelemetry, Wireshark (for outbound call monitoring) |
+
+ Example: Minimal Red Team Lab Setup (Localhost)
+
+## Launch a llama.cpp model server
+``` bash
+./server -m models/llama-2-13b-chat.gguf --port 8000
+
+# Spin up a prompt tester
+python3 -m prompt_lab --model_url http://localhost:8000
+
+# Set up RAG with ChromaDB and LlamaIndex
+docker-compose up chromadb
+python3 rag_server.py --docs ./redteam_docs/
+```
