@@ -89,3 +89,24 @@ AML is to ML what buffer overflows were to C. It opens new attack vectors: logic
 | **TextAttack**                   | NLP-focused AML (e.g., LLM adversarial prompts)            |
 | **PromptInject, Gauntlet**       | LLM prompt manipulation frameworks                         |
 | **BackdoorBox**                  | Open-source framework for backdooring and defending models |
+
+## Goals of AI Red Teaming
+
+- **Expose and exploit unsafe behavior** in ML systems.  
+- **Model attacker strategies** such as prompt injection, logic corruption, or model theft.  
+- **Validate system boundaries** under adversarial conditions.  
+- **Simulate abuse and misuse scenarios**, not just technical vulnerabilities.
+
+## Phases of an AI Red Team Operation
+
+_Adapted from MITRE ATLAS and the work of Anthropic/OpenAI Red Teams_
+
+| **Phase**              | **Description**                                                |
+|-------------------------|----------------------------------------------------------------|
+| **Planning**           | Identify model purpose, threat landscape, abuse cases          |
+| **Reconnaissance**     | Study model architecture, API, inputs, defenses                |
+| **Threat Modeling**    | Build attacker persona: insider, external, malicious developer |
+| **Adversarial Simulation** | Generate targeted adversarial inputs (e.g., jailbreaks)    |
+| **Post-Exploitation**  | Trigger side-effects, unauthorized outputs, or unsafe actions  |
+| **Reporting**          | Document system responses, gaps, recommendations               |
+
