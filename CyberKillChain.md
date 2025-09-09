@@ -99,3 +99,45 @@ Example:
 | **Autonomy**   | Full pipeline execution via agent frameworks                      |
 
 
+## AI Tools and Frameworks in the Kill Chain
+
+| Tool/Model          | Phase Usage                   | Description                                     |
+|----------------------|-------------------------------|-------------------------------------------------|
+| **ChatGPT / Claude** | Recon to Exploitation         | Prompt-based reconnaissance and payload gen.    |
+| **GPT4All / LM Studio** | Local C2 or phishing lab   | Offline AI agent for red team ops               |
+| **OpenLLM / LocalAI**  | Persistent malware agent    | Host AI for embedded or post-exploitation use   |
+| **AutoGPT / CrewAI**   | Multi-stage automation      | Simulate attackers with multiple objectives     |
+| **LangChain + Tools**  | Custom tool-chaining platform | Integrate LLM with offensive tooling          |
+
+
+## Model Categories Overview
+- This section introduces and classifies the primary categories of AI/ML models applicable in offensive security. It highlights their architectural principles, offensive security capabilities, and use cases across reconnaissance, exploitation, evasion, and post-exploitation.
+
+| Model Type                 | Purpose                                           | Key Applications in Offensive Security                                   |
+|-----------------------------|---------------------------------------------------|--------------------------------------------------------------------------|
+| **LLMs (Large Language Models)** | Understand and generate natural language and code | Phishing, recon automation, payload generation                           |
+| **Code Generation Models**  | Specialized in producing valid code snippets from prompts | Malware writing, vulnerability chaining, obfuscation                    |
+| **Embeddings Models**       | Convert text/code into vector form for similarity comparison | OSINT, credential reuse detection, phishing detection evasion            |
+| **Classification Models**   | Assign input to a category (binary/multi-label)   | Bypass of email filters, AV/EDR evasion, malicious intent detection       |
+| **Reinforcement Learning (RL)** | Learn actions based on rewards in an environment | Evasion techniques, polymorphic malware, adaptive C2 behavior             |
+| **Diffusion & GANs**        | Generate media (images, audio, video) using noise-based or adversarial training | Deepfake generation, synthetic voice, QR-based phishing |
+
+
+**1. Large Language Models (LLMs)**
+
+Examples: GPT-4, Claude, LLaMA, Mistral, Falcon, Zephyr
+
+Use Cases:
+
+    - Social engineering: impersonation, prompt injection testing
+    - Recon: parsing breach dumps, enriching OSINT
+    - Vulnerability exploitation: chaining vulnerabilities based on system output
+
+Example Prompt:
+``` bash
+    “Based on this nmap scan and whoami, suggest next 3 privilege escalation techniques.”
+```
+
+
+
+
